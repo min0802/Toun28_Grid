@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>양정민 : 톤28 (1920)</title>
+	<link href="jquery.bxslider.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="favicon/favicon.ico"><!--파비콘-->
+	 
+	<style>
+		* {
+			margin:0; 
+			padding:0;
+		}
+		body {
+			overflow-x:hidden;
+		}
+
+		.intro {
+			position:absolute; margin:0 auto; 
+			width:100%;
+			height:980px;
+			background:url(images/intro_grid.png) no-repeat center top;
+			z-index:1;
+		}
+		.wrap {
+			width:100%;
+			height:16724px;
+			background:url(images/main_grid.jpg) no-repeat center top;
+		}
+		.gifText1{
+			position:absolute; top:2001px; left:0;
+			width:100%; 
+			height:201px; 
+			background:url(images/text1.gif) center center no-repeat;
+			overflow-x:hidden;
+			z-index:10;
+		}
+		.gifText2{
+			position:absolute; top:6214px; left:0;
+			width:100%; 
+			height:201px; 
+			background:url(images/text2.gif) center center no-repeat;
+			overflow-x:hidden;
+			z-index:10;
+		}
+		.gifText3{
+			position:absolute; top:10056px; left:0;
+			width:100%; 
+			height:201px; 
+			background:url(images/text3.gif) center center no-repeat;
+			overflow-x:hidden;
+			z-index:10;
+		}
+		.bxslider{
+			width:100%;
+			position: relative;
+		}
+		.bxslider li {
+			height:980px;
+		} 
+		.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+			bottom:61px; z-index:10; /*서클네비 위치값*/
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a {
+			width: 12px;
+			height: 12px;
+			border-radius:12px;	
+		}
+		.bxslider .list1{
+			background:url(images/pic1.png) no-repeat center center;
+		}
+		.bxslider .list2{
+			background:url(images/pic2.png) no-repeat center center;
+		}
+		.bxslider .list3{
+			background:url(images/pic3.png) no-repeat center center;
+		}
+		.bxslider .list4{
+			background:url(images/pic4.png) no-repeat center center;
+		}
+	</style>
+	<!-- jQuery library -->
+	<script src="jquery-3.1.1.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				mode: 'horizontal',
+				speed: 500, /*캐러셀 변경 시간*/
+				auto:true,
+				randomStart:false,
+				pause: 2800, /*캐러셀 머무는 시간*/
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="intro"></div>
+
+	<div class="wrap">
+		<ul class="bxslider">
+		  <li class="list1"></li>
+		  <li class="list2"></li>
+		  <li class="list3"></li>
+		  <li class="list4"></li>
+		</ul>
+	</div>
+
+	<div class="gifText1"></div>
+	<div class="gifText2"></div>
+	<div class="gifText3"></div>	
+</body>
+</html>
